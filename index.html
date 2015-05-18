@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% assign sorted_slides = site.slides | sort:"order" %}
+{% for s in sorted_slides %}
+  {% assign slide = s.content %}
+  {% include slide.html %}
+{% endfor %}
+
